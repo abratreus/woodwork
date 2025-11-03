@@ -2,14 +2,15 @@ import React from 'react';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import logo from '../../assets/logo.ico';
 
 const Home = () => {
   const comodos = [
-    { title: 'Sala de Estar', description: 'Sala aconchegante e moderna.', image: '/logo.ico' },
-    { title: 'Quarto', description: 'Quarto confortável e personalizado.', image: '/logo.ico' },
-    { title: 'Cozinha', description: 'Cozinha funcional e elegante.', image: '/logo.ico' },
-    { title: 'Banheiro', description: 'Banheiro sofisticado.', image: '/logo.ico' },
-    { title: 'Escritório', description: 'Escritório produtivo.', image: '/logo.ico' },
+    { title: 'Sala de Estar', description: 'Sala aconchegante e moderna.', image: logo },
+    { title: 'Quarto', description: 'Quarto confortável e personalizado.', image: logo },
+    { title: 'Cozinha', description: 'Cozinha funcional e elegante.', image: logo },
+    { title: 'Banheiro', description: 'Banheiro sofisticado.', image: logo },
+    { title: 'Escritório', description: 'Escritório produtivo.', image: logo },
   ];
 
   return (
