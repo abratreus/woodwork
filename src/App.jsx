@@ -4,10 +4,11 @@ import NavBar from './Components/NavBar/NavBar.jsx'
 import Footer from './Components/Footer/Footer.jsx'
 import Home from './Pages/Home/Home.jsx'
 import Catalogo from './Pages/Catalogo/Catalogo.jsx'
-import Login from './Pages/Login/Login.jsx'
+import Login from './Pages/Conta/Login.jsx'
 import NotFound from './Pages/NotFound/NotFound.jsx'
 import Sobre from './Pages/Sobre/Sobre.jsx'
 import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary.jsx";
+import Cadastro from './Pages/Conta/Cadastro.jsx'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
@@ -16,17 +17,18 @@ function App() {
   return (
     <div>
     <ErrorBoundary>
-      {location.pathname !== '/login' && <NavBar />}
+      {location.pathname !== '/login' && location.pathname !== '/cadastro' && <NavBar />}
       <main id="main" style={{ minHeight: '70vh' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/cadastro" element={<Cadastro/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      {location.pathname !== '/login' && <Footer />}
+      {location.pathname !== '/login' && location.pathname !== '/cadastro' && <Footer />}
     </ErrorBoundary>
     </div>
   );

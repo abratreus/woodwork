@@ -35,7 +35,7 @@ const Home = () => {
             {comodos.map((comodo, index) => (
               <Carousel.Item key={index}>
                 <Row className="justify-content-center">
-                  {comodos.slice(index, index + 3).map((item, subIndex) => (
+                  {comodos.slice(index).map((item, subIndex) => (
                     <Col md={4} key={subIndex} className="mb-4">
                       <div className="product-card text-center">
                         <img src={item.image} alt={item.title} className="img-fluid mb-3" />

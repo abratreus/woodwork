@@ -11,7 +11,6 @@ function FormsContato({ value, onChange }) {
       required
     >
       <option value="">Selecione um meio de contato</option>
-      <option value="email">E-mail</option>
       <option value="whatsapp">Whatsapp</option>
       <option value="telefone">Telefone</option>
     </Form.Select>

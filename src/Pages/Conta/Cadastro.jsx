@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../../Components/Button/Button.jsx';
-import './Login.css';
+import './Conta.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,8 +9,8 @@ import loginImage from '../../assets/pexels-jeshoots-com-147458-834892.jpg';
 import FormsContato from '../../Components/FormsContato/FormsContato.jsx';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-const Login = () => {
-  const [credentials, setCredentials] = useState({ email: '', password: '', contact: '', contactValue: '' });
+const Cadastro = () => {
+  const [credentials, setCredentials] = useState({password: '', contact: '', contactValue: '' });
   const [captchaToken, setCaptchaToken] = useState(null);
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ const Login = () => {
       alert('Por favor, complete o reCAPTCHA.');
       return;
     }
-    console.log('Login attempt:', credentials);
+    console.log('Sign up attempt:', credentials);
     navigate('/');
   };
 
@@ -41,8 +41,7 @@ const Login = () => {
           </div>
         </Col>
         <Col md={6} className="d-flex flex-column align-items-center h-100">
-          <form className="login-form shadow-lg bg-body-tertiary" onSubmit={handleSubmit}>
-            <h2 className="text-center mb-4">Entrar</h2>
+          <form className="login-form shadow-lg bg-body-tertiary" onSubmit={handleSubmit}>  
             <input
               type="email"
               name="email"
@@ -64,14 +63,12 @@ const Login = () => {
             <FormsContato value={credentials.contact} onChange={handleChange} />
             {credentials.contact && (
               <input
-                type={credentials.contact === 'email' ? 'email' : 'tel'}
+                type={'tel'}
                 name="contactValue"
-                placeholder={`Digite seu ${credentials.contact === 'email' ? 'email' : 'telefone'}`}
-                value={credentials.contact === 'email' ? credentials.email : credentials.contactValue}
+                value={credentials.contactValue}
                 onChange={handleChange}
                 required
                 className="form-control mb-3 "
-                disabled={credentials.contact === 'email'}
               />
             )}
             <ReCAPTCHA
@@ -79,7 +76,7 @@ const Login = () => {
               onChange={handleCaptchaChange}
               className="mb-3"
             />
-            <Button type="submit" className="w-100">Entrar</Button>
+            <Button type="submit" className="w-100">Cadastrar-se</Button>
             <Link to="/" className="btn btn-secondary mb-3 align-self-start">
               <i className="bi bi-arrow-left-circle"></i> Voltar
             </Link>
@@ -90,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Cadastro;
