@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Home.css';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.ico';
 
 const Home = () => {
   const comodos = [
