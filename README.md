@@ -19,7 +19,7 @@ O site apresenta uma aplicação web moderna e responsiva, utilizando **Bootstra
 ## ⚙️ Instalação e Execução
 
 ### 🧾 Pré-requisitos
-- Node.js (versão 18 ou superior)
+- Node.js (versão 20.19+ ou 22.12+)
 - npm ou yarn instalado
 
 ### 📦 Instalação
@@ -48,11 +48,39 @@ npm run build
 Os arquivos otimizados serão gerados na pasta **dist/**.
 
 ### 🌐 Deploy para GitHub Pages
-O deploy é automatizado via **GitHub Actions**.  
-Para realizar o deploy manualmente:
-```bash
-npm run deploy
-```
+O projeto está configurado para deploy manual no GitHub Pages usando `gh-pages`.
+
+#### Pré-requisitos para Deploy
+- O projeto deve estar em um repositório GitHub (ex.: `https://github.com/abratreus/woodwork`).
+- Certifique-se de que `npm run build` gera a pasta `dist/` com arquivos estáticos.
+- Instale `gh-pages` se não estiver instalado: `npm install gh-pages --save-dev`.
+
+#### Configuração
+1. **Atualize `package.json`** (já configurado):
+   - Campo `homepage`: `"https://abratreus.github.io/woodwork"`
+   - Scripts: `predeploy` e `deploy` já presentes.
+
+2. **Atualize `vite.config.js`** (já configurado):
+   - Campo `base`: `'/woodwork/'` (ajustado para produção).
+
+3. **Atualize `src/main.jsx`** (já configurado):
+   - Campo `basename` no `BrowserRouter`: `'/woodwork/'` (ajustado para produção).
+
+#### Build e Deploy
+Execute estes comandos na raiz do projeto:
+- `npm run build` (gera a pasta `dist/`).
+- `npm run deploy` (envia o build para a branch `gh-pages` no GitHub).
+
+#### Habilitar GitHub Pages
+- Acesse o repositório no GitHub.
+- Vá para Settings > Pages.
+- Defina Source como "Deploy from a branch", Branch como `gh-pages`, Folder como `/ (root)`.
+- Salve. O site ficará disponível em `https://abratreus.github.io/woodwork` após alguns minutos.
+
+#### Problemas Comuns
+- **Página em branco no deploy**: Verifique se `base` em `vite.config.js` e `basename` em `main.jsx` correspondem exatamente ao nome do repositório. Para React Router, defina `basename="/woodwork"` no `BrowserRouter`.
+- **Erros no build**: Verifique o console; certifique-se de que todos os assets estão em `dist/`.
+- **Alternativas**: Para deploys mais fáceis, considere Netlify ou Vercel (conecte o repositório GitHub para builds automáticos).
 
 ---
 
