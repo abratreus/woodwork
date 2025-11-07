@@ -11,6 +11,7 @@ const Home = () => {
     { title: 'Cozinha', description: 'Cozinha funcional e elegante.', image: logo },
     { title: 'Banheiro', description: 'Banheiro sofisticado.', image: logo },
     { title: 'Escritório', description: 'Escritório produtivo.', image: logo },
+    { title: 'Personalizado', description: 'Comodo personalizado', image: logo },
   ];
 
   return (
@@ -32,10 +33,10 @@ const Home = () => {
         <Container>
           <h2 className="text-center mb-4">Nossos Cômodos</h2>
           <Carousel className='carousel carousel-dark slide'>
-            {comodos.map((comodo, index) => (
-              <Carousel.Item key={index}>
+            {Array.from({ length: Math.ceil(comodos.length / 3) }, (_, slideIndex) => (
+              <Carousel.Item key={slideIndex}>
                 <Row className="justify-content-center">
-                  {comodos.slice(index).map((item, subIndex) => (
+                  {comodos.slice(slideIndex * 3, (slideIndex + 1) * 3).map((item, subIndex) => (
                     <Col md={4} key={subIndex} className="mb-4">
                       <div className="product-card text-center">
                         <img src={item.image} alt={item.title} className="img-fluid mb-3" />

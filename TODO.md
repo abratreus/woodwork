@@ -1,6 +1,8 @@
-# TODO: Make Login and Cadastro Screens Responsive for Mobile and Fix Captcha Responsiveness
+# TODO: Improve Login and Cadastro Responsiveness and Add Features
 
-- [x] Update Conta.css to reduce padding on .login-form for mobile screens
-- [x] Add responsive styles for ReCAPTCHA component
-- [x] Test the changes on mobile view (server running on http://localhost:5174/)
-- [x] Ensure Cadastro.jsx uses the same responsive styles for consistency (both use .login-form class)
+- [x] Update Cadastro.jsx to hide image on <lg and make form full width
+- [x] Add introductory text overlay on image area for Login.jsx
+- [x] Add introductory text overlay on image area for Cadastro.jsx
+- [x] Adjust Conta.css to reduce padding on tablet screens (md)
+- [x] Add functional "Esqueci minha senha" modal to Login.jsx
+- [x] Test the changes on mobile, tablet, and desktop views
