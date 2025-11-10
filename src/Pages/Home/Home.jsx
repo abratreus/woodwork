@@ -31,7 +31,7 @@ const Home = () => {
       </section>
       <section className="products-section py-5">
         <Container>
-          <h2 className="text-center mb-4">Nossos Cômodos</h2>
+          <h2 className="text-center mb-4">Selecione um Cômodo para simular Orçamento</h2>
           <Carousel className='carousel carousel-dark slide'>
             {Array.from({ length: Math.ceil(comodos.length / 3) }, (_, slideIndex) => (
               <Carousel.Item key={slideIndex}>

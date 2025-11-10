@@ -24,9 +24,21 @@ export default function Footer() {
           </Col>
           <Col md={4} className="mb-4">
             <h5>Contato</h5>
-            <p>Telefone: (12) 99117-7237</p>
-            <p>Email: contato@woodwork.com</p>
-            <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+            <p>Telefone: (12) 992269957</p>
+            <p>Email: abratreus.lopes@gmail.com</p>
+            <p>Endereço:</p>
+            <div style={{ width: '100%', height: '250px', overflow: 'hidden', borderRadius: '8px' }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d459.6832899566599!2d-45.18789779541721!3d-22.82223080874421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1762811399926!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização WoodWork"
+              ></iframe>
+            </div>
           </Col>
         </Row>
         <hr className="my-4" />
