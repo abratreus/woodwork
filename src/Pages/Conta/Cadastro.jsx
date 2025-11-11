@@ -35,12 +35,16 @@ const Cadastro = () => {
   return (
     <Container fluid className="login-container">
       <Row className="justify-content-center align-items-center min-vh-100 p-0 m-0">
-        <Col md={6} className="d-none d-md-block p-0">
+        <Col md={6} className="d-none d-lg-block p-0">
           <div className="login-image">
-            <img src={loginImage} alt="Login" className="img-fluid w-100 h-100 object-fit-cover" />
+            <img src={loginImage} alt="Cadastro" className="img-fluid w-100 h-100 object-fit-cover" />
+            <div className="image-overlay">
+              <h2>Bem-vindo à Woodwork</h2>
+              <p>Crie sua conta e personalize seus móveis sob medida.</p>
+            </div>
           </div>
         </Col>
-        <Col md={6} className="d-flex flex-column align-items-center h-100">
+        <Col className="d-flex flex-column align-items-center h-100">
           <form className="login-form shadow-lg bg-body-tertiary" onSubmit={handleSubmit}>  
             <input
               type="email"

@@ -12,6 +12,7 @@ const Home = () => {
     { title: 'Cozinha', description: 'Cozinha funcional e elegante.', image: logo },
     { title: 'Banheiro', description: 'Banheiro sofisticado.', image: logo },
     { title: 'Escritório', description: 'Escritório produtivo.', image: logo },
+    { title: 'Personalizado', description: 'Comodo personalizado', image: logo },
   ];
 
   const catalogItems = [
@@ -45,7 +46,7 @@ const Home = () => {
       </section>
       <section className="products-section py-5">
         <Container>
-          <h2 className="text-center mb-4">Nossos Cômodos</h2>
+          <h2 className="text-center mb-4">Selecione um Cômodo para simular Orçamento</h2>
           <Row className="justify-content-center">
             {comodos.map((comodo, index) => (
               <Col xs={6} sm={4} md={2} key={index} className="mb-4">
