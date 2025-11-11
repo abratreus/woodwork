@@ -1,7 +1,7 @@
 .login-container {
   min-height: 100vh;
-  padding-left: 0px!important;
-  padding-right: 0px!important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 .login-image {
@@ -33,6 +33,19 @@
     transform: scale(0.8);
     transform-origin: 0 0;
     width: 125%;
+  }
+}
+
+/* Additional responsive adjustments for better mobile experience */
+@media (max-width: 576px) {
+  .login-form {
+    padding: 2vh 2vh 2vh 2vh;
+  }
+  .login-form .form-control {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  .login-form .btn {
+    font-size: 16px;
   }
 }
 

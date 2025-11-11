@@ -1,0 +1,31 @@
+.orcamento-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.step-indicator {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.step-indicator span {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.step-indicator span.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer:hover {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}

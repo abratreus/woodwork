@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Button from '../Button/Button';
 import './FormOrcamento.css';
 
-const FormOrcamento = () => {
+const FormOrcamento = ({ selectedRoom, selectedFurniture, selectedMaterials }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
+    message: selectedRoom ? `Orçamento para ${selectedRoom}\nMóveis: ${selectedFurniture.join(', ')}\nMateriais: ${selectedMaterials.join(', ')}` : '',
   });
 
   const handleChange = (e) => {

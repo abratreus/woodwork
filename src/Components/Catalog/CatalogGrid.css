@@ -1,6 +1,14 @@
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
+/* CatalogGrid.css - Now using Bootstrap for responsiveness, minimal custom styles */
+
+.room-section {
+  margin-bottom: 3rem;
+}
+
+.room-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
 }
