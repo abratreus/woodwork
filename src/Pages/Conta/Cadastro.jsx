@@ -35,12 +35,12 @@ const Cadastro = () => {
   return (
     <Container fluid className="login-container">
       <Row className="justify-content-center align-items-center min-vh-100 p-0 m-0">
-        <Col md={6} className="d-none d-lg-block p-0">
+        <Col md={8} className="d-none d-lg-block p-0">
           <div className="login-image">
             <img src={loginImage} alt="Cadastro" className="img-fluid w-100 h-100 object-fit-cover" />
             <div className="image-overlay">
-              <h2>Bem-vindo à Woodwork</h2>
-              <p>Crie sua conta e personalize seus móveis sob medida.</p>
+            <h2>Bem-vindo de volta</h2>
+            <p>Entre na sua conta para acessar seu histórico e solicitar seu orçamento</p>
             </div>
           </div>
         </Col>
@@ -73,6 +73,7 @@ const Cadastro = () => {
                 onChange={handleChange}
                 required
                 className="form-control mb-3 "
+                placeholder='Número de Telefone'
               />
             )}
             <ReCAPTCHA

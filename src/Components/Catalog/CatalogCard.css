@@ -1,8 +1,10 @@
 .catalog-card {
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   padding: 1rem;
   text-align: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: #000000;
 }
 
 .catalog-card img {
